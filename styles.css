@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Kaushan+Script&display=swap');
+:root {
+  --primary-color: rgb(110, 64, 248);
+  --semilight-color: rgba(255, 255, 255, 0.7);
+  --light-color: rgb(255, 255, 255);
+  --semigray-color: rgb(191, 191, 191);
+  --gray-color: rgb(77, 77, 77);
+  --dark-color: rgb(0, 0, 0);
+
+  --h1-font-size: 2rem;
+  --h2-font-size: 1.75rem;
+  --h3-font-size: 1.5rem;
+  --h4-font-size: 1.25rem;
+  --lead-font-size: 1.125rem;
+  --text-base: 1rem;
+  --text-sm: 0.875rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.75;
+  color: var(--light-color);
+  background-color: var(--primary-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+input,
+textarea,
+button {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+section {
+  width: 100%;
+  padding: 3.5rem 0;
+}
+
+/********************* TYPOGRAPHY *********************/
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-title {
+  font-size: var(--h2-font-size);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/********************* HERO SECTION *********************/
+#hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      rgba(110, 64, 248, 0.95),
+      rgba(110, 64, 248, 0.95)
+    ),
+    url('./assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--light-color);
+}
+
+#hero > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.name {
+  font-family: 'Kaushan Script', cursive;
+  font-size: var(--h1-font-size);
+  transform: rotate(-3deg);
+}
+
+.job-description {
+  font-size: var(--lead-font-size);
+}
+
+.hero-btn {
+  padding: 0.75rem 2.5rem;
+  font-size: var(--text-base);
+  color: var(--light-color);
+  border: 3px solid var(--light-color);
+  border-radius: 0.5rem;
+}
+
+/********************* ABOUT SECTION *********************/
+#about {
+  color: var(--gray-color);
+  background-color: var(--light-color);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2.5rem;
+}
+
+#about > .container > h2 {
+  color: var(--dark-color);
+}
+
+.greeting {
+  text-align: center;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+.introduce {
+  text-align: center;
+}
+
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  margin: 0 auto;
+}
+
+.education {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.hat {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+.hat > img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.level {
+  color: var(--dark-color);
+  margin: 0.25rem 0 0.5rem;
+}
+
+.course {
+  font-size: var(--text-sm);
+  margin-bottom: 0.25rem;
+}
+
+.school {
+  font-size: var(--text-base);
+}
+
+/********************* PROJECTS SECTION *********************/
+#projects {
+  color: var(--light-color);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  min-width: 18rem;
+  background-color: var(--light-color);
+  border-radius: 0.25rem;
+}
+
+.card-image {
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card-image > img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.card-image > img:hover {
+  transform: scale(1.1);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: var(--h4-font-size);
+  color: var(--dark-color);
+}
+
+.card-text,
+.card-sub-text {
+  color: var(--gray-color);
+}
+
+.card-text {
+  font-size: var(--text-base);
+}
+
+.card-sub-text {
+  font-size: var(--text-sm);
+}
+
+.card-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.card-buttons > * {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: var(--primary-color);
+  border-radius: 0.25rem;
+  border: 2px solid var(--primary-color);
+  transition: all 0.2s ease;
+}
+
+.card-buttons a:nth-of-type(1) {
+  color: var(--light-color);
+  background-color: var(--primary-color);
+}
+
+.card-buttons a:nth-of-type(1):hover {
+  background-color: rgb(88, 42, 226);
+}
+
+.card-buttons a:nth-of-type(2):hover {
+  color: var(--light-color);
+  background-color: var(--primary-color);
+}
+
+/********************* CONTACT SECTION *********************/
+#contact {
+  display: grid;
+  grid-template-columns: repeat(1, 1r);
+  padding: 0;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+.contact-image {
+  display: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-form {
+  padding: 2.5rem;
+}
+
+.contact-form > h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+input,
+textarea {
+  padding: 1rem;
+  font-size: var(--text-base);
+  font-family: inherit;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+}
+
+input:focus,
+textarea:focus {
+  border: 3px solid var(--primary-color);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btnSubmit {
+  margin-top: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: var(--text-base);
+  color: var(--light-color);
+  background-color: var(--primary-color);
+  border-radius: 100vmax;
+  transition: all 0.3s ease;
+}
+
+.btnSubmit:hover {
+  background-color: rgb(88, 42, 226);
+}
+
+/********************* FOOTER *********************/
+footer {
+  padding: 0.5rem;
+}
+
+footer > .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--text-sm);
+}
+
+@media screen and (min-width: 600px) {
+  :root {
+    --h1-font-size: 3rem;
+    --h2-font-size: 2.25rem;
+    --h3-font-size: 1.75rem;
+    --h4-font-size: 1.5rem;
+    --lead-font-size: 1.25rem;
+    --text-base: 1.125rem;
+    --text-sm: 1rem;
+  }
+
+  section {
+    padding: 5rem;
+  }
+
+  .section-title {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #contact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-image {
+    display: block;
+  }
+
+  .contact-form > h2 {
+    text-align: left;
+  }
+
+  .input-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .greeting {
+    text-align: center;
+  }
+
+  .introduce {
+    text-align: justify;
+  }
+
+  .about-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
