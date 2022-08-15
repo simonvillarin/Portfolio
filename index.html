@@ -7,11 +7,23 @@
 
     <link rel="stylesheet" href="styles.css" />
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>Portfolio</title>
   </head>
   <body>
     <section id="hero">
-      <div class="container">
+      <div
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="true"
+        data-aos-anchor-placement="top-center"
+        class="container"
+      >
         <div class="profile">
           <img src="assets/Profile.jpg" alt="Profile Image" />
         </div>
@@ -27,7 +39,17 @@
     </section>
 
     <section id="about">
-      <div class="container">
+      <div
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="true"
+        data-aos-anchor-placement="top-center"
+        class="container"
+      >
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
           <div class="about-description">
@@ -100,8 +122,30 @@
 
     <section id="projects">
       <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="cards-container">
+        <h2
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
+          data-aos-anchor-placement="top-center"
+          class="section-title"
+        >
+          Projects
+        </h2>
+        <div
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
+          data-aos-anchor-placement="top-center"
+          class="cards-container"
+        >
           <div class="card">
             <div class="card-image">
               <img src="assets/easybank.png" alt="Project Image" />
@@ -265,8 +309,28 @@
     </section>
 
     <section id="contact">
-      <div class="contact-image"></div>
-      <div class="contact-form">
+      <div
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="true"
+        data-aos-anchor-placement="top-center"
+        class="contact-image"
+      ></div>
+      <div
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="true"
+        data-aos-anchor-placement="top-center"
+        class="contact-form"
+      >
         <h2 class="section-title">Contact Me</h2>
         <form action="https://formspree.io/f/mlevelpl" method="POST">
           <div class="input-group">
@@ -312,5 +376,10 @@
     <footer>
       <div class="container">© Simon James H. Villarin. All Rights</div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
